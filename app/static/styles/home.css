@@ -1,0 +1,21 @@
+body{
+    background-image: url("img/homeBackgound.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+div{
+    margin: 250px 100px;
+}
+
+h1{
+    font-size: 60px;
+    color: red;
+    /*font-family: BodoniMT;*/
+}
+
+h3{
+    font-size: 35px;
+    color: white;
+}

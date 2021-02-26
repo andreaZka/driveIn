@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="{{url_for('static', filename='form.js')}}"></script>
+</head>
+<body>
+<div class="container">
+    <br><br><br><br>
+    <form class="form-inline">
+        <div class="form-group">
+        <label class="sr-only" for="emailInput">Email address</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="nameInput">Name</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="FIrst name">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <br><br>
+    <div id="successAllert" class="allert allert-succes" role="alert"></div>
+    <div id="errorAllert" class="alert alert-danger" role="alert"></div>
+
+</div>
+</body>
+</html>

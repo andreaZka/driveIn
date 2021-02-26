@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Servizi{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link href='https://fonts.googleapis.com/css?family=Nova Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/services.css') }}"/>
+    <script>
+        $(document).on('click','.help-btn',function (){
+            var selected_ticketDIV = $(this).parent();
+	        var id_string = $(selected_ticketDIV).find("p.ticketID").text();
+	        console.log(id_string);
+	        let idTicket = id_string.split("#",2)[1];
+            window.location.href = "/services/"+idTicket+"/selectProduct";
+        });
+
+    $( window ).on( "load", function() {
+	    $(".dataOra").each(function (){
+
+            let date_string = ($(this).text()).split(".")[0]; //taglio i millisecondi dalla data
+		    let newDate = date_string.substr("0",date_string.length-3); //taglio i secondi
+		    $(this).text(newDate);
+        })
+    });
+    </script>
+{% endblock %}
+
+{% block content %}
+     <div id="rightDIV">
+       <div id="header-container"><p id="headerTXT">Seleziona biglietto per cui effettuare ordine:</p></div>
+        {% if tickets %}
+            <div class="ticket-container">
+{#            <h3>Seleziona biglietto per cui effettuare ordine:</h3>#}
+            {% for i in tickets  %}
+                <div class="ticket2">
+	                <header class="ticket2__header"> &nbsp{{ i.proiezione.titolo }}</header>
+	                <div class="ticket2__rip"></div>
+	                <div class="ticket2__body">
+                        <p class="ticketID">Ticket id: #{{ i.id_ticket }}</p>
+                        <p>Cinema: {{ i.proiezione.theatre.address }}</p>
+                        <p class="dataOra">Data: {{ i.proiezione.orario }}</p>
+                        <button class="help-btn" >Seleziona</button>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        {% else %}
+            <img id="attention" src="/static/styles/img/attenzione.png">
+            <p id="noTicket">NON HAI BIGLIETTI ACQUISTATI</p>
+        {% endif %}
+
+     </div>
+
+    <img src="/static/styles/img/services.jpg" id="leftImg">
+
+{% endblock %}

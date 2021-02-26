@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+
+{% block title %}Accedi{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+
+
+    <h1>Accesso</h1>
+    <div class="rectangle">
+
+
+        <div class="login">
+            <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p id="username">
+            {{ form.username.label  }}
+            <br id="labelusername">
+            {{ form.username }}
+            {% for error in form.username.errors %} {# controlla se ci sono errori nell'username #}
+               <span style="color: red;">[{{ error }}]</span> {# se ci sono vengono mostrati sotto il form user #}
+            { {% endfor %}
+
+        </p>
+        <p id="password">
+            {{ form.password.label }}<br id="labelpass">
+            {{ form.password }}
+            {% for error in form.password.errors %} {# stessa cosa per password #}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p id="labelricordami">
+            {{ form.ricordami() }} {{ form.ricordami.label }}
+        </p>
+
+        <p id="submit">
+            {{ form.submit() }}
+        </p>
+        <p>
+            {{ form.csrf_token }}
+        </p>
+            </form>
+        </div>
+    </div>
+{% endblock %}

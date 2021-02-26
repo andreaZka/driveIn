@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/filmView.css') }}"/>
+    <script src="{{url_for('static', filename='filmViewAPI.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div id="event_descript"></div>
+        <div id="eventsCalendar">
+        <table class="proiezioni">
+                <tr id="header">
+                    <th>Cinema</th>
+                    <th>Orario</th>
+                    <th>Acquisto</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Biglietto{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link href='https://fonts.googleapis.com/css?family=Nova Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/myTickets.css') }}"/>
+    <script src="{{url_for('static', filename='myTickets.js')}}"></script>
+    <script>
+        var myTickets;
+        function search(){
+            myTickets = document.getElementById("srcBar").value;
+
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+
+    <h2>Seleziona il biglietto per cui effettuare l'ordine:</h2>
+    <div class="biglietto">
+        <img src="/static/styles/img/tickets.jpg" id="biglietto">
+    </div>
+    <div id="rightDIV">
+    <div id="header-container"></div>
+        {% if tickets %}
+            <div class="ticket-container">
+            {% for i in tickets  %}
+                <div class="ticket2">
+                    <header class="ticket2__header"> &nbsp{{ i.proiezione.titolo }}</header>
+	                    <div class="ticket2__rip"></div>
+	                    <div class="ticket2__body">
+                        <p class="dataOra">Evento: {{ i.proiezione.titolo }} {{ i.proiezione.orario }}</p>
+                        <p>Cinema: {{ i.proiezione.theatre.address }} </p>
+                        <p class="ticketID">Ticket id: #{{ i.id_ticket }}  </p>
+{#                    <div class="center">#}
+                        <button class="help-btn" >Clicca per QR del biglietto</button>
+{#                    </div>#}
+                        </div>
+                </div>
+            {% endfor %}
+        {% else %}
+
+            <img id="attention" src="/static/styles/img/attenzione.png">
+            <p id="noTicket">NON HAI BIGLIETTI ACQUISTATI</p>
+        {% endif %}
+    </div>
+    </div>
+
+{% endblock %}

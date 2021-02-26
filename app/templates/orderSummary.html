@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/orderSummary.css') }}"/>#}
+    <script src="{{url_for('static', filename='orderSummary.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="page">
+        <img  class="page" id="img_summer" src="/static/styles/img/summer.jpg">
+    <h2 id="init">Ordine effettuato!</h2>
+    <div id="ticket2" style="margin-top: 50px; margin-left: 50px; width: 500px;">
+        <header class="ticket2__header">Ordine:</header>
+        <div class="ticket2__body"></div>
+    </div>
+        </div>
+    <button class="help-btn" onclick="backHome()">Torna alla home</button>
+{% endblock %}

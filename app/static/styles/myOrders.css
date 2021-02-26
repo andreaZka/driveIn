@@ -1,0 +1,162 @@
+
+main
+{
+        width:70%;
+        margin-left:auto;
+        margin-right:auto;
+	    background-color: white;
+	    padding: 16px 32px 16px 32px;
+}
+.center{text-align: center;}
+
+.help-btn
+{
+	padding: 16px 32px 16px 32px;
+	font-family: arial,verdana, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	border: 2px solid #2E7D32;
+	border-radius: 30px;
+	color: #2E7D42;
+	transition: 0.25s ease-in-out;
+	margin: 1em auto;
+    display: block;
+}
+
+.help-btn:hover {
+	border: 2px solid #666;
+	color: #666;
+}
+
+
+.sfondo {
+	position: fixed;
+	z-index: 9998;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.corpo {
+	position: fixed;
+	z-index: 9999;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 23%;
+	background-color: #f7f7f7;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,1);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,1);
+	/*text-align: center;*/
+}
+
+.chiudi {
+	position: absolute;
+	z-index: 9999;
+	top: 73%;
+	right: 44%;
+	padding: 10px 15px;
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	line-height: 25px;
+	color: #f7f7f7;
+	background: #4caf50;
+	cursor: pointer;
+}
+
+.contenuto {
+	clear: both;
+	padding: 2.5rem;
+	font-family: Impact, Charcoal, sans-serif;
+	text-align: center;
+	font-size: 18px;
+}
+
+
+.orders-container{
+	margin-top: 0;
+	box-sizing: content-box;
+	width: 100%;
+	 height: 52vh;
+	overflow-y: auto;
+	background-image: url("img/sfondoNeutro4.jpg");
+	background-size: cover;
+	text-align: center;
+}
+
+.orderBox{
+  display: inline-block;
+	transition: .5s;
+	margin: 2% 2%;
+}
+
+.boxHeader {
+  position: relative;
+  height: 150px;
+  background-image: linear-gradient(#4caf50, green);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+}
+
+h1 {
+  margin: 0;
+  padding: 30px 0 0 0;
+  font: 34px "Arial";
+  color: white;
+  text-align: center;
+}
+
+.descSection {
+  	margin-top: -5vw;
+  	background-image: linear-gradient(135deg, #777, #111);
+	padding-block-start: 5.5em;
+    padding-block-end: 1em;
+	padding-bottom: 1em;
+}
+
+
+p {
+  margin: 0;
+  padding: 6px 0;
+  font: 22px "Arial";
+  color: white;
+  text-align: center;
+}
+
+.txtLeft{
+	text-align: left;
+	margin-left: 3%;
+}
+
+
+#sfondo{
+	position: relative;
+	margin-top: 0;
+	width: 100%;
+	height: 46vh;
+	    background-image: url("img/popcorn5.jpg");
+	background-size: cover;
+}
+
+#avviso{
+	font-size: 30px;
+	font-family: 'Nova Mono';
+	color: black;
+	position: relative;
+	margin-top: 1%;
+}
+
+#allertImg{
+	max-height: 400px;
+    max-width: 300px;
+	margin-top: 1%;
+}

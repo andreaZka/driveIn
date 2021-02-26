@@ -1,0 +1,128 @@
+
+
+body {margin: 0;}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 5px solid #50af50;
+    z-index: 2;
+    text-align: center;
+}
+
+
+#logo{
+    float: left;
+    display: block;
+    max-height: 125px;
+    max-width: 125px;
+    vertical-align: middle;
+    padding: 0;
+}
+#uno {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 33px 24px;
+    text-decoration: none;
+    font-family: Montserrat, serif;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+}
+#due {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 33px 24px;
+    text-decoration: none;
+    font-family: Montserrat, serif;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+}#tre {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 33px 24px;
+    text-decoration: none;
+    font-family: Montserrat, serif;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+}
+ #quattro {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 33px 24px;
+    text-decoration: none;
+    font-family: Montserrat, serif;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+}
+ #cinque{
+      float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 33px 24px;
+    text-decoration: none;
+    font-family: Montserrat, serif;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+ }
+
+
+
+li button{
+    float: right;
+    display: inline-block;
+    /*text-align: center;*/
+    /*margin: 20px 20px;*/
+    cursor: pointer;
+    /*margin: auto;*/
+    position: relative;
+    /*top: 50%;*/
+    /*margin: auto;*/
+
+    font-family: arial,verdana, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #4caf50;
+    border-radius: 30px;
+    color: #4caf50;
+    transition: 0.25s ease-in-out;
+    width: 100px;
+    height: 50px;
+    vertical-align: middle;
+    margin-top: 1.2%;
+    margin-right: 3%;
+}
+/*.bottoni {*/
+/*    position: absolute;*/
+/*    left: 76%;*/
+/*    top: -28%;*/
+/*    width: 100px;*/
+/*    height: 39px;*/
+/*}*/
+
+#alertMSG {
+    position: relative;
+    /*margin-top: 5%;*/
+    /*font-family: arial,verdana, sans-serif;*/
+    /*font-weight: bold;*/
+    font-family: Montserrat, serif;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+    color: white;
+    /*padding: 0.1em;*/
+    margin-top: 5%;
+}

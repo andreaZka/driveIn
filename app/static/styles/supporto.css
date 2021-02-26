@@ -1,0 +1,59 @@
+.imm_supporto{
+       position: fixed;
+    top: 12%;
+    width: 100%;
+    height: 100%;
+        overflow-y: auto;
+}
+.imm_1{
+     position: absolute;
+    top: 0%;
+    width: 100%;
+}
+.imm_2{
+   position: absolute;
+    top: 4%;
+    left: 76%;
+}
+.assistenza{
+   text-align: center;
+    font-size: 38px;
+    font-family: Montserrat;
+    position: absolute;
+    top: 62%;
+    left: 11%;
+}
+.email{
+         text-align: center;
+    font-size: 38px;
+    font-family: Montserrat;
+    position: absolute;
+    top: 82%;
+}
+.numero{
+        text-align: center;
+    font-size: 38px;
+    font-family: Montserrat;
+    position: absolute;
+    top: 82%;
+    left: 76%;
+    width: fit-content;
+}
+.citrovi{
+text-align: center;
+    position: absolute;
+    font-size: 38px;
+    font-family: Montserrat;
+}
+.social{
+   position: absolute;
+    top: 56%;
+    width: 100%;
+    height: 70%;
+}
+.info{
+position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 15%;
+}

@@ -1,0 +1,87 @@
+
+img{
+    max-height: 400px;
+    max-width: 200px;
+}
+
+.titolo{
+    cursor: pointer;
+}
+
+.posto_selezionato{
+
+    max-width: 120px;
+    max-height: 170px;
+
+}
+
+.posto_libero{
+    max-width: 120px;
+    max-height: 170px;
+}
+
+.posto_occupato{
+    max-width: 120px;
+    max-height: 170px;
+
+}
+
+#posti{
+    float: right;
+    position: relative;
+    top: 100px;
+    left: 3%;
+    right: 3%;
+    width: 50%;
+    height: 100vh;
+    align-content: center;
+    /*display: block;*/
+    font-family: 'Nova Mono';
+    font-size: 20px;
+    color: #4caf50;
+}
+
+.fila{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#leftDIV{
+    position: relative;
+    float: left;
+    top: 100px;
+    left: 3%;
+    width: 35%;
+    height: 100vh;
+    align-content: center;
+}
+
+#buyButton{
+    display: block;
+    padding: 16px 32px 16px 32px;
+    font-family: arial,verdana, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #4caf50;
+    border-radius: 30px;
+    color: #4caf50;
+    transition: 0.25s ease-in-out;
+    position: absolute;
+    top: 100%;
+    width: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#poster{
+    display: block;
+    max-height: 650px;
+    max-width: 450px;
+    margin-top: 80px;
+    z-index: -1;
+    margin-left: auto;
+    margin-right: auto;
+
+}

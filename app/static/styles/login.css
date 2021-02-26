@@ -1,0 +1,65 @@
+body{
+   background-image: url("img/login.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.rectangle{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 751px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -314px;
+    margin-left: -377px;
+}
+
+.login{
+    font-size: 33px;
+    font-family: arial,verdana, sans-serif;
+    letter-spacing: -0.015em;
+    color: #040404;
+    position: absolute;
+    padding-left: 20px;
+    height: 400px;
+    width: 400px;
+    max-height: 100%;
+    max-width: 100%;
+    text-align: left;
+    position: absolute;
+    left: 14%;
+}
+#username{
+    width: 500px;
+    height: 30px;
+}
+#password{
+    width: 500px;
+    height: 30px;
+
+}
+#labelricordami{
+    padding-top: 35px;
+    font-size: 20px;
+}
+#submit{
+   float: right;
+	padding: 16px 32px 16px 32px;
+	font-family: arial,verdana, sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	border: 2px solid #4caf500d;
+	border-radius: 30px;
+	color: #4caf50;
+	transition: 0.25s ease-in-out;
+    position: fixed;
+    left: 45%;
+}
+#li{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

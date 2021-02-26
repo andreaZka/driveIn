@@ -1,0 +1,41 @@
+
+<head>
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/topBar.css') }}"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='topBar.js')}}"></script>
+        <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+
+
+<body>
+
+<ul id="topBar">
+    <li> <a href="/home"><img src="/static/styles/img/logo.jpg" id="logo"></a></li>
+    <li> <a href="/srcFilm" id="uno">Cerca Film</a> </li>
+    <li> <a href="/myOrders" id="cinque">My Orders</a> </li>
+    <li> <a href="/myTickets" id="due">My tickets</a> </li>
+    <li> <a href="/services" id="quattro">Prenota servizi</a> </li>
+     <li> <a href="/supporto" id="tre">Supporto</a> </li>
+
+    {% if current_user.is_anonymous %}
+        <li> <button onclick="logIn()" class="bottoni" id="log">Log in</button> </li>
+        <li> <button onclick="regist()" class="bottoni" id="reg">Registrati</button> </li>
+    {% else %}
+        <li> <button onclick="logOut()" class="bottoni" id="logout">Log out</button> </li>
+    {% endif %}
+    {% with messages = get_flashed_messages() %} {# assegno i messaggi dell'applicazione con with #}
+    {% if messages %}   {# se ci sono messaggi ad es. di errore #}
+    <ul id="alertMSG">
+            {% for message in messages %} {# li mostra in una lista #}
+            <li>{{ message }}</li>
+            {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+</ul>
+
+    {% block content %}{% endblock %}
+
+</body>

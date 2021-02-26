@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Seleziona posto{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link href='https://fonts.googleapis.com/css?family=Nova Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/selectSeat.css') }}"/>
+    <script src="{{url_for('static', filename='selectSeat.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div id="leftDIV">
+        <button id="buyButton" onclick="buy()">Acquista</button>
+    </div>
+
+    <div id="posti">
+    <h2>SCEGLI POSTO:</h2>
+    </div>
+
+
+{% endblock %}

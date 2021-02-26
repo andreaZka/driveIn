@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/buyTicket.css') }}"/>
+    <script src="{{url_for('static', filename='buyTicket.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="ticket2">
+
+        <header class="ticket2__header"> &nbsp{{ ticket.proiezione.titolo }} </header>
+        <div class="ticket2__rip"></div>
+        <div class="ticket2__body">
+            <p>Ticket ID: #{{ ticket.id_ticket }}</p>
+            <p>Username: {{ ticket.utente.username }}</p>
+            <p class="dataOra"> {{ ticket.proiezione.theatre.address }} {{ ticket.proiezione.orario }} </p>
+            <p>Posto: {{ ticket.posto }}</p>
+        </div>
+
+    </div>
+<button class="help-btn" onclick="backHome()">Torna alla home</button>
+
+
+{% endblock %}

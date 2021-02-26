@@ -1,0 +1,17 @@
+{% extends "srcFilm.html" %}
+
+{% block title %}result{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/srcFilmResult.css') }}"/>
+    <script src="{{url_for('static', filename='srcFilmAPI.js')}}"></script>
+{% endblock %}
+
+{% block film_info %}
+
+
+    <div class="container">
+
+    </div>
+
+{% endblock %}

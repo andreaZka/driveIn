@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Seleziona prodotti{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link href='https://fonts.googleapis.com/css?family=Nova Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/selectProduct.css') }}"/>
+    <script src="{{url_for('static', filename='selectProduct.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <p class="biglietto">SERVIZI PER BIGLIETTO: #{{ idTicket }}</p>
+    <p id="selectInfo">SELEZIONA CON UN CLICK E AGGIUNGI AL CARRELLO:</p>
+    <div id="products-box">
+
+            <div class="product-container-popcorn" id="div0">
+                <img src="/static/styles/img/pop_corn.png">
+                <p class="product" id="0">Pop corn piccoli</p>
+            </div>
+            <div class="product-container-popcorn" id="div1">
+                <img src="/static/styles/img/pop_corn.png">
+                <p class="product" id="1">Pop corn medi</p>
+            </div>
+            <div class="product-container-popcorn" id="div2">
+                <img src="/static/styles/img/pop_corn.png">
+                <p class="product" id="2">Pop corn grandi</p>
+
+        </div>
+        <br>
+            <div class="product-container-coca" id="div3">
+                <img src="/static/styles/img/coca.png">
+                <p class="product" id="3">Coca 33cl</p>
+            </div>
+            <div class="product-container-coca" id="div4">
+                <img src="/static/styles/img/coca.png">
+                <p class="product" id="4">Coca 66cl</p>
+            </div>
+    </div>
+
+    <p id="footer">QUELLO CHE ACQUISTI SARÀ PORTATO ALLA TUA POSTAZIONE</p>
+    <button onclick="proceed()" id="proceed_button">Acquista</button>
+
+{% endblock %}
